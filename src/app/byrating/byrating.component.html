@@ -1,0 +1,33 @@
+<form (ngSubmit)="searchRating(f)" #f="ngForm">
+  <div class="row">
+    <div class="col-md-4 form-group">
+      <label for="low">Rating-low</label>
+      <input type="number" id="low"
+      min="1" max="9"
+      name="low"
+      ngModel>
+      <label for="high">Rating-high</label>
+      <input type="number" id="high"
+      min="1" max="9"
+      name="type"
+      ngModel>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-primary">Search by Rating</button>
+    </div>
+  </div>
+</form>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let ser of series" >
+      <div class="panel panel-primary">
+        <div class="panel-heading"><h4>Name:{{ser.name}}</h4></div>
+        <div class="panel-body">
+          <h5>genre: {{ser.genre}}</h5>
+          <h5>season:  {{ser.season}}</h5>
+          <h5>episode_number: {{ser.episode_number}}</h5>
+          <h5>rating:  {{ser.rating}}</h5>
+      </div>
+    </div>
+  </div>
+</div>

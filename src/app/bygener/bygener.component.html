@@ -1,0 +1,29 @@
+<form (ngSubmit)="searchGenre(f)" #f="ngForm">
+  <div class="row">
+    <div class="col-md-6 form-group">
+      <label for="Genre">Genre</label>
+      <input type="text" id="genre"
+      name="genre"
+      ngModel>
+      <label for="Genre">Crime, Thriller, Comedy, Mystery, Horror, Drama, Reality, History</label>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-primary" >Search by gener</button>
+    </div>
+  </div>
+</form>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let ser of series" >
+      <div class="panel panel-primary">
+        <div class="panel-heading"><h4>Name:{{ser.name}}</h4></div>
+        <div class="panel-body">
+          <h5>genre: {{ser.genre}}</h5>
+          <h5>season:  {{ser.season}}</h5>
+          <h5>episode_number:  {{ser.episode_number}}</h5>
+          <h5>rating:  {{ser.rating}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let ser of series" >
+      <div class="panel panel-primary">
+        <div class="panel-heading"><h4>Name:{{ser.name}}</h4></div>
+        <div class="panel-body">
+          <h4>genre: {{ser.genre}}</h4>
+          <h5>season:  {{ser.season}}</h5>
+          <h5>episode_number:  {{ser.episode_number}}</h5>
+          <h5>rating:  {{ser.rating}}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
