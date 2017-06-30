@@ -16,7 +16,7 @@ export class ByratingComponent implements OnInit {
   ngOnInit() {
   }
 
-  searchActor(form:NgForm) {
+  searchRating(form:NgForm) {
     var low = form.value.low;
     var high = form.value.high;
     this.series = this.seriesdb.getSeriesByRating(low,high);
